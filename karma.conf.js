@@ -18,9 +18,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'node_modules/power-assert/build/power-assert.js',
-        // "test/**/*.js",
-        "test/**/*.coffee",
+      'node_modules/power-assert/build/power-assert.js',
+      // "test/**/*.js",
+      "test/**/*.coffee",
     ],
 
 
@@ -32,8 +32,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        'test/**/*.js': ['webpack'],
-        'test/**/*.coffee': ['webpack'],
+      'test/**/*.js': ['webpack'],
+      'test/**/*.coffee': ['webpack'],
     },
 
 
@@ -63,8 +63,8 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
-        'PhantomJS',
-        // 'Chrome',
+      'PhantomJS',
+      // 'Chrome',
     ],
 
 
@@ -76,32 +76,34 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
 
+
     webpack: {
-        resolve: {
-            extensions: [
-                '',
-                '.js',
-                '.coffee',
-            ],
-            modulesDirectories: ["node_modules"],
-        },
-        module: {
-            loaders: [
-                { test: /\.coffee$/, loader: 'coffee-loader' },
-            ],
-            preLoaders: [
-            ],
-            postLoaders: [
-                { test: /Test\.js$/, loader: 'webpack-espower-loader' },
-                { test: /Test\.coffee$/, loader: 'webpack-espower-loader' },
-            ],
-        },
-        // devtool: 'inline-source-map',
+      resolve: {
+        extensions: [
+          '',
+          '.js',
+          '.coffee',
+        ],
+        modulesDirectories: ["node_modules"],
+      },
+      module: {
+        loaders: [
+          { test: /\.coffee$/, loader: 'coffee-loader' },
+        ],
+        preLoaders: [
+        ],
+        postLoaders: [
+          { test: /Test\.js$/, loader: 'webpack-espower-loader' },
+          { test: /Test\.coffee$/, loader: 'webpack-espower-loader' },
+        ],
+      },
+      // devtool: 'inline-source-map',
     },
+
     webpackMiddleware: {
-        // webpack-dev-middleware configuration
-        // i. e.
-        noInfo: true
+      // webpack-dev-middleware configuration
+      // i. e.
+      noInfo: true
     },
 
   })
