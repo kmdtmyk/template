@@ -1,3 +1,5 @@
+# http://EditorConfig.org
+
 root = true
 
 [*]
@@ -18,4 +20,7 @@ indent_size = 2
 [*.css]
 
 [package.json]
+indent_size = 2
+
+[karma.conf.js]
 indent_size = 2
