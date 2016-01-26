@@ -1,11 +1,11 @@
 Field = require("../src/field")
 
-describe 'test', ->
+describe 'field test', ->
 
-  it 'field test', ->
-    field = new Field(2, 3)
-    assert(field.col == 2)
-    assert(field.row == 3)
+  it 'constructor', ->
+    field = new Field()
+    assert(field.col == 6)
+    assert(field.row == 13)
 
 
   it 'size', ->
@@ -13,6 +13,7 @@ describe 'test', ->
     assert(field.size() == 6 * 13)
 
 
-  it "1+1は2であるべき！", ->
-    assert(1 + 1 == 3)
+  # it "1+1は2であるべき！", ->
+    # assert(Field.RED == 1)
+    # console.log (Field.DEFAULT_COL)
     # assert.notEqual(1 + 1, 3)
