@@ -1,5 +1,5 @@
 {
-  "name": "puyo",
+  "name": "template",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -19,6 +19,8 @@
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
     "power-assert": "^1.2.0",
+    "ts-loader": "^0.8.0",
+    "typescript": "^1.7.5",
     "webpack": "^1.12.11",
     "webpack-espower-loader": "^1.0.1"
   }
