@@ -1,4 +1,4 @@
-Array2D = require("../src/array2d")
+Array2D = require("../../src/coffee/array2d")
 
 describe 'array2d', ->
 
