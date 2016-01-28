@@ -12,7 +12,7 @@ describe('array2d', function(){
 
 // Array2D = require("../../src/typescript/array2d")
 //
-// describe 'array2d', function(){
+// describe('array2d', function(){
 //
 //     var array2d;
 //
