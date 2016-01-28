@@ -17,6 +17,8 @@ indent_size = 4
 [*.coffee]
 indent_size = 2
 
+[*.ts]
+
 [*.css]
 
 [package.json]

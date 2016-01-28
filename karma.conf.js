@@ -21,6 +21,7 @@ module.exports = function(config) {
       'node_modules/power-assert/build/power-assert.js',
       // "test/**/*.js",
       "test/**/*.coffee",
+      "test/**/*.ts",
     ],
 
 
@@ -34,6 +35,7 @@ module.exports = function(config) {
     preprocessors: {
       'test/**/*.js': ['webpack'],
       'test/**/*.coffee': ['webpack'],
+      'test/**/*.ts': ['webpack'],
     },
 
 
@@ -83,18 +85,21 @@ module.exports = function(config) {
           '',
           '.js',
           '.coffee',
+          '.ts',
         ],
         modulesDirectories: ["node_modules"],
       },
       module: {
         loaders: [
           { test: /\.coffee$/, loader: 'coffee-loader' },
+          { test: /\.ts$/, loader: 'ts-loader' },
         ],
         preLoaders: [
         ],
         postLoaders: [
           { test: /Test\.js$/, loader: 'webpack-espower-loader' },
           { test: /Test\.coffee$/, loader: 'webpack-espower-loader' },
+          { test: /Test\.ts$/, loader: 'webpack-espower-loader' },
         ],
       },
       // devtool: 'inline-source-map',
