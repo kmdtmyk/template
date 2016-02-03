@@ -2,35 +2,38 @@
 
 
 
-export = class Array2D{
+export = class{
 
-    private array2d;
+    private map;
 
     constructor(row, col, value){
-        this.array2d = [];
+        this.map = [];
         for(var i = 0; i < row; i++){
             var array = [];
             for(var j = 0; j < col; j++){
                 array.push(value);
             }
-            this.array2d.push(array);
+            this.map.push(array);
         }
     }
 
     public get(y, x){
-        if(this.array2d[y] == undefined){
+        if(this.map[y] == undefined){
             return undefined;
         }
-        return this.array2d[y][x];
+        return this.map[y][x];
     }
 
     public set(y, x, value): void{
-        if(this.array2d[y] == undefined){
+        if(this.map[y] == undefined){
             return;
         }
-        this.array2d[y][x] = value;
+        this.map[y][x] = value;
     }
 
+    public toArray(){
+        return JSON.parse(JSON.stringify(this.map));
+    }
     // reset: (value) ->
     //
     // clone: ->
