@@ -1,19 +1,7 @@
 import Array2D = require('../../src/typescript/array2d');
 
-// describe('array2d', function(){
-//
-//     it('get', function(){
-//         assert(10 == 10);
-//     });
-//
-//
-// });
 
-
-
-// Array2D = require("../../src/typescript/array2d")
-
-describe('array2d', function(){
+describe('array2d', () => {
 
     var array2d;
 
@@ -21,7 +9,15 @@ describe('array2d', function(){
         array2d = new Array2D(2, 3, 0);
     });
 
-    it('get', function(){
+    it('toArray', () => {
+        var expect = [
+            [0, 0, 0],
+            [0, 0, 0],
+        ];
+        assert.deepEqual(expect, array2d.toArray());
+    });
+
+    it('get', () => {
         var expect = [
             [0, 0, 0],
             [0, 0, 0],
