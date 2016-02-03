@@ -19,7 +19,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/power-assert/build/power-assert.js',
-      // "test/**/*.js",
+      "test/**/*.js",
       "test/**/*.coffee",
       "test/**/*.ts",
     ],
@@ -91,6 +91,7 @@ module.exports = function(config) {
       },
       module: {
         loaders: [
+          { test: /\.js$/, loader: 'babel-loader' },
           { test: /\.coffee$/, loader: 'coffee-loader' },
           { test: /\.ts$/, loader: 'ts-loader' },
         ],

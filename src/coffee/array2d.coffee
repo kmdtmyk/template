@@ -1,43 +1,45 @@
 
 
-module.exports = class Array2D
+module.exports = class
 
   constructor: (row, col, value) ->
-    @array2d = []
+    @map = []
     for i in [0...row]
       array = []
       for j in [0...col]
         array.push(value)
-      @array2d.push(array)
+      @map.push(array)
 
   get: (y, x) ->
-    if @array2d[y] == undefined
+    if @map[y] == undefined
       return undefined
-    @array2d[y][x]
+    @map[y][x]
 
   set: (y, x, value) ->
-    if @array2d[y] == undefined
+    if @map[y] == undefined
       return
-    @array2d[y][x] = value
+    @map[y][x] = value
     return
 
   reset: (value) ->
 
   clone: ->
 
+  toArray: ->
+    JSON.parse(JSON.stringify(@map))
 
 
   # @create: (row, col, value) ->
-  #   array2d = []
+  #   map = []
   #   for i in [0...row]
   #     array = []
   #     for j in [0...col]
   #       array.push(value)
-  #     array2d.push(array)
-  #   array2d
+  #     map.push(array)
+  #   map
   #
-  # @get: (array2d, y, x) ->
-  #   if array2d[y] == undefined
+  # @get: (map, y, x) ->
+  #   if map[y] == undefined
   #     undefined
   #
-  #   array2d[y][x]
+  #   map[y][x]
